@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:9.2.1'
+        classpath 'com.google.gms:google-services:4.4.4'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.android.billingclient:billing:8.1.0'
+    }
+
+    // Force all modules to use the JetBrains toolchain (Android Studio's JDK)
+    // to avoid using incomplete JREs found in VS Code extensions.
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin('com.android.application') || project.plugins.hasPlugin('com.android.library')) {
+            project.android {
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_21
+                    targetCompatibility = JavaVersion.VERSION_21
+                }
+                // Force the toolchain within the android block (supported in AGP 8.1+)
+                java {
+                    toolchain {
+                        languageVersion = JavaLanguageVersion.of(21)
+                        vendor = JvmVendorSpec.JETBRAINS
+                    }
+                }
+            }
+        }
+        
+        // Also apply to any module with a Java extension (including Android modules)
+        def javaExtension = project.extensions.findByType(JavaPluginExtension)
+        if (javaExtension) {
+            javaExtension.toolchain {
+                languageVersion = JavaLanguageVersion.of(21)
+                vendor = JvmVendorSpec.JETBRAINS
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

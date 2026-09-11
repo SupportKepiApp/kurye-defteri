@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanım Şartları - Kurye Defteri</title>
+    <style>
+        :root {
+            --brand: #2563eb;
+            --brand-dark: #1e40af;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+            color: white;
+            padding: 3rem 1.5rem 2.5rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; }
+        .header .date { margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.85; }
+        .container {
+            max-width: 720px;
+            margin: -1.5rem auto 3rem;
+            background: var(--card);
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            padding: 2rem 1.75rem;
+        }
+        .intro { font-size: 0.95rem; color: var(--text-light); margin-bottom: 1.75rem; }
+        .intro p { margin-bottom: 0.75rem; }
+        section { margin-bottom: 1.75rem; }
+        section h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--brand);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        section h2::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 1.1rem;
+            background: var(--brand);
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+        section p { font-size: 0.925rem; color: var(--text); }
+        .contact-box {
+            margin-top: 2rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .contact-box p { font-size: 0.9rem; color: var(--text); }
+        .contact-box a { color: var(--brand); font-weight: 600; text-decoration: none; }
+        .footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+        @media (max-width: 640px) {
+            .header { padding: 2.5rem 1.25rem 2rem; }
+            .header h1 { font-size: 1.4rem; }
+            .container { padding: 1.5rem 1.25rem; margin: -1.25rem 0.75rem 2rem; border-radius: 1rem; }
+            section h2 { font-size: 0.95rem; }
+            section p { font-size: 0.875rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Kullanım Şartları</h1>
+        <div class="date">Son güncelleme: 25 Temmuz 2026</div>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <p>Kurye Defteri uygulamasını kullanarak aşağıdaki şartları kabul etmiş olursunuz. Lütfen bu şartları dikkatlice okuyun.</p>
+        </div>
+
+        <section>
+            <h2>1. Kullanım Lisansı</h2>
+            <p>Bu uygulama esnaf kuryelerin bireysel gelir-gider takibi içindir. Uygulamanın kaynak kodları üzerinde tersine mühendislik yapılması, kopyalanması veya izinsiz dağıtımı yasaktır. Uygulama, kullanıcına kişisel bir lisans sağlar ve bu lisans başkalarına devredilemez.</p>
+        </section>
+
+        <section>
+            <h2>2. Hizmetin Kapsamı</h2>
+            <p>Kurye Defteri, esnaf kuryelerin finansal takibini kolaylaştırmak için sunulan bir analiz aracıdır. Uygulama resmi muhasebe veya vergi beyanı niteliği taşımaz. Hesaplamalar yalnızca bilgilendirme amaçlıdır.</p>
+        </section>
+
+        <section>
+            <h2>3. Sorumluluk Reddi</h2>
+            <p>Uygulama içerisindeki finansal hesaplamalar ve girilen veriler tamamen kullanıcının sorumluluğundadır. Oluşabilecek veri kayıplarına karşı düzenli yedekleme önerilir. Uygulama geliştiricileri, veri kaybı veya hatalı hesaplamalardan sorumlu tutulamaz.</p>
+        </section>
+
+        <section>
+            <h2>4. Abonelik ve Deneme</h2>
+            <p>Uygulama belirli bir deneme süresi sunar. Deneme süresi bitiminde hizmete devam etmek için abonelik başlatmanız gerekir. Abonelik, belirtilen koşullar sağlandığı sürece geçerlidir ve istediğiniz zaman iptal edebilirsiniz.</p>
+        </section>
+
+        <section>
+            <h2>5. Hesap Güvenliği</h2>
+            <p>Google hesabınız ile giriş yaparken, hesap güvenliğiniz kendi sorumluluğunuzdadır. Hesabınızın izinsiz kullanımından doğacak zararlardan uygulama geliştiricileri sorumlu değildir.</p>
+        </section>
+
+        <section>
+            <h2>6. Değişiklikler</h2>
+            <p>Uygulama geliştirme sürecinde özelliklerde ve kullanım şartlarında güncellemeler yapılabilir. Güncellemeler yayınlandığı andan itibaren geçerli olur.</p>
+        </section>
+
+        <section>
+            <h2>7. İletişim</h2>
+            <p>Kullanım şartlarıyla ilgili sorularınız için bizimle iletişime geçebilirsiniz.</p>
+        </section>
+
+        <div class="contact-box">
+            <p>İletişim: <a href="mailto:support.kepiapp@gmail.com">support.kepiapp@gmail.com</a></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Kurye Defteri. Tüm hakları saklıdır.
+    </div>
+</body>
+</html>
